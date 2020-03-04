@@ -43,7 +43,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // 데이터 갯수
+    
         
         if let news = newsData{
             return news.count
@@ -54,10 +54,10 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // 무엇 반복 10번
+   
         //let cell = UITableViewCell.init(style: .default, reuseIdentifier: "TableCellType1")
         let cell = TableViewMain.dequeueReusableCell(withIdentifier: "Type1",for: indexPath) as! Type1
-        //as ? 타입을 안전하게 변환하는 as       as!   타입을 강제로 변환 하는  as
+      
           let idx = indexPath.row
         if let news = newsData{
             let row = news[idx]
